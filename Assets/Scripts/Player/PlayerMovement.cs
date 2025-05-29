@@ -57,8 +57,6 @@ public class PlayerMovement : MonoBehaviour
         _characterController.Move(move * (speed * Time.deltaTime));
 
         float jumpValue = _jumpAction.ReadValue<float>();
-        
-        Debug.Log(jumpValue);
 
         if (jumpValue > 0f && isGrounded)
         {

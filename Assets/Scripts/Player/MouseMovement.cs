@@ -35,6 +35,9 @@ public class MouseMovement : MonoBehaviour
         
         Vector2 lookMovement = _lookAction.ReadValue<Vector2>();
         
+        lookMovement.x *= mouseSensitivity * Time.deltaTime;
+        lookMovement.y *= mouseSensitivity * Time.deltaTime;
+        
         _xRotation -= lookMovement.y;
         
         _xRotation = Mathf.Clamp(_xRotation, _bottomClamp, _topClamp);
